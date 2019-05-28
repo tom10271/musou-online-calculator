@@ -1,0 +1,152 @@
+<form>
+  <label>
+      數量
+      <input type="number" [(ngModel)]="weapon.count" (change)="onOptionsChanged()" 
+        [ngModelOptions]="{standalone: true}" min="0" max="10" />
+    </label>
+    
+    <br>
+
+    <label>
+      改造次數<br>
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nModified == 0]"
+          (click)="weapon.nModified = 0; onOptionsChanged()"
+      >
+          0
+      </button>
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nModified == 1]"
+          (click)="weapon.nModified = 1; onOptionsChanged()"
+      >
+          1
+      </button>
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nModified == 2]"
+          (click)="weapon.nModified = 2; onOptionsChanged()"
+      >
+          2
+      </button>
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nModified == 3]"
+          (click)="weapon.nModified = 3; onOptionsChanged()"
+      >
+          3
+      </button>
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nModified == 4]"
+          (click)="weapon.nModified = 4; onOptionsChanged()"
+      >
+          4
+      </button>
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nModified == 5]"
+          (click)="weapon.nModified = 5; onOptionsChanged()"
+      >
+          5
+      </button>
+    </label>
+    
+    <br>
+
+    <label>
+      傳說化 <br>
+
+      所需鍊丹
+      <input type="number" [(ngModel)]="weapon.nPillsForLengendize" (change)="onOptionsChanged()" 
+        [ngModelOptions]="{standalone: true}" min="0" max="99" />
+      
+      <br>
+
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nLegendarizes == 0]"
+          (click)="weapon.nLegendarizes = 0; onOptionsChanged()"
+      >
+          0
+      </button>
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nLegendarizes == 1]"
+          (click)="weapon.nLegendarizes = 1; onOptionsChanged()"
+      >
+          1
+      </button>
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nLegendarizes == 2]"
+          (click)="weapon.nLegendarizes = 2; onOptionsChanged()"
+      >
+          2
+      </button>
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nLegendarizes == 3]"
+          (click)="weapon.nLegendarizes = 3; onOptionsChanged()"
+      >
+          3
+      </button>
+    </label>
+    
+    <br>
+
+    <label>
+      鍛數<br>
+      <button
+          [ngClass]="{ true: 'btn-info' }[weapon.nStonesUsed == 0]"
+          (click)="weapon.nStonesUsed = 0; onOptionsChanged()"
+      >
+          20↓
+      </button>
+      <button
+        [ngClass]="{ true: 'btn-info' }[weapon.nStonesUsed == 21]"
+        (click)="weapon.nStonesUsed = 21; onOptionsChanged()"
+      >
+        21
+      </button>
+      <button
+        [ngClass]="{ true: 'btn-info' }[weapon.nStonesUsed == 22]"
+        (click)="weapon.nStonesUsed = 22; onOptionsChanged()"
+      >
+        22
+      </button>
+      <button
+        [ngClass]="{ true: 'btn-info' }[weapon.nStonesUsed == 23]"
+        (click)="weapon.nStonesUsed = 23; onOptionsChanged()"
+      >
+        23
+      </button>
+      <button
+        [ngClass]="{ true: 'btn-info' }[weapon.nStonesUsed == 24]"
+        (click)="weapon.nStonesUsed = 24; onOptionsChanged()"
+      >
+        24
+      </button>
+      <button
+        [ngClass]="{ true: 'btn-info' }[weapon.nStonesUsed == 25]"
+        (click)="weapon.nStonesUsed = 25; onOptionsChanged()"
+      >
+        25
+      </button>
+      <button
+        [ngClass]="{ true: 'btn-info' }[weapon.nStonesUsed == 26]"
+        (click)="weapon.nStonesUsed = 26; onOptionsChanged()"
+      >
+        26
+      </button>
+      <button
+        [ngClass]="{ true: 'btn-info' }[weapon.nStonesUsed == 27]"
+        (click)="weapon.nStonesUsed = 27; onOptionsChanged()"
+      >
+        27
+      </button>
+      <button
+        [ngClass]="{ true: 'btn-info' }[weapon.nStonesUsed == 28]"
+        (click)="weapon.nStonesUsed = 28; onOptionsChanged()"
+      >
+        28
+      </button>
+      <button
+        [ngClass]="{ true: 'btn-info' }[weapon.nStonesUsed == 29]"
+        (click)="weapon.nStonesUsed = 29; onOptionsChanged()"
+      >
+        29
+      </button>
+    </label>
+</form>

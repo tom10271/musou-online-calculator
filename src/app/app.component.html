@@ -1,0 +1,50 @@
+<h1>真三國無雙Online 合成經驗計算器</h1>
+
+<div class="options-container">
+  <form>
+    <label for="">
+      目標等級：
+      <input type="number" [(ngModel)]="targetLv" (change)="onOptionsChanged()" 
+        [ngModelOptions]="{standalone: true}" min="0" max="100" />
+    </label>
+
+    <button (click)="targetLv = 10; onOptionsChanged()">10</button>
+    <button (click)="targetLv = 20; onOptionsChanged()">20</button>
+    <button (click)="targetLv = 30; onOptionsChanged()">30</button>
+    <button (click)="targetLv = 40; onOptionsChanged()">40</button>
+    <button (click)="targetLv = 50; onOptionsChanged()">50</button>
+    <button (click)="targetLv = 60; onOptionsChanged()">60</button>
+    <button (click)="targetLv = 70; onOptionsChanged()">70</button>
+    <button (click)="targetLv = 80; onOptionsChanged()">80</button>
+    <button (click)="targetLv = 90; onOptionsChanged()">90</button>
+    <button (click)="targetLv = 100; onOptionsChanged()">100</button>
+
+  
+  <br>
+
+  <label for="">
+    已有經驗：
+    <input type="number" [(ngModel)]="experienceGained"
+      [ngModelOptions]="{standalone: true}" min="0" max="338350" />
+  </label>
+
+  </form>
+</div>
+
+所需經驗為: {{ experiencesNeeded - experienceGained }}
+得到經驗: {{ experiencesProvided }}
+尚久經驗: {{ experiencesNeeded - experienceGained - experiencesProvided }}
+
+<hr>
+所用貴石： {{ materialsNeeded.stones }} 所用鍊丹： {{ materialsNeeded.pills }}
+
+<hr>
+
+<button (click)="addWeapon()">增加素材</button> <br>
+
+<ng-container *ngFor="let weapon of weapons; let i = index">
+  武器 #{{ i + 1 }} - {{ weapon.resolveExperienceProdvided() }} <button class="pull-right" (click)="removeWeapon(i)"> X </button>
+
+  <musou-weapon [weapon]="weapon" (onExperienceResolved)="collect()"></musou-weapon>
+  
+</ng-container>
